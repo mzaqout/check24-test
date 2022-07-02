@@ -37,7 +37,7 @@
                     if ($auth->isLoggedIn()): ?>
                         <li><a href="new_entry.php">[New Entry]</a></li> <?php
                     endif; ?>
-                    <li><a href="imprint.php">Imprint</a></li>
+                    <li><a href="page.php?slug=imprint">Imprint</a></li>
                 </ul>
                 <?php
                 if ($auth->isLoggedIn()): ?>
@@ -89,6 +89,12 @@ endif; ?>
 if ( $page === 'post-details' ) :
     include_once 'partials/post_details.php';
 endif; ?>
+
+<?php
+if ( $page === 'page_content' ) :
+    include_once 'partials/page.php';
+endif; ?>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./assets/js/script.js"></script>

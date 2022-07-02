@@ -57,7 +57,7 @@ ul {
 }
 
 .login-form {
-    background-color: #dce8f5;
+    background-color: #e1edf3;
     padding: 15px 20px;
 }
 
@@ -71,7 +71,7 @@ ul {
     width: 20%;
     padding: 10px;
     height: 20px;
-    background-color: aliceblue;
+    background-color: #e1edf3;
     border: 1px solid #000000;
     border-radius: 3px;
 }
@@ -86,7 +86,7 @@ ul {
     margin-left: 100px;
     width: 10%;
     padding: 10px;
-    background-color: aliceblue;
+    background-color: #e1edf3;
     color: #000000;
     border: 1px solid #000000;
     border-radius: 3px;
@@ -168,4 +168,9 @@ ul {
 }
 .flex-1 {
     flex: 1;
+}
+
+.page-container {
+    background-color: #e1edf3;
+    padding: 15px 20px;
 }

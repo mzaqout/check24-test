@@ -20,6 +20,7 @@ try {
     $post = new Post( $conn );
     $comment = new \App\Classes\Comment( $conn );
     $auth = new Auth( $conn, new Session() );
+    $page = new \App\Classes\Page( $conn );
 } catch ( Exception $e ) {
     echo $e->getMessage();
 }

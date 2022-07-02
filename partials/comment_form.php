@@ -26,3 +26,5 @@
         </form>
     </div>
 </div>
+
+<!-- if I had time I would add a captcha for this form to avoid automatically creation of comments and unexpected behaviour -->

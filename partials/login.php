@@ -24,3 +24,5 @@
         </form>
     </div>
 </div>
+
+<!-- If I had time I would add a captcha for this form to avoid brute forcing -->

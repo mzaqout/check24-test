@@ -2,7 +2,7 @@
     "name": "mamdouh/check24-test",
     "autoload": {
         "psr-4": {
-            "Mamdouh\\Check24Test\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [

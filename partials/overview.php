@@ -3,6 +3,7 @@ if( $posts ) {
     ?>
     <div class="container mt-1">
         <?php
+
         foreach( $posts as $post ) {
             if ( $post['body'] ) {
                 if ( strlen( $post['body'] ) >= 1000 ) {
@@ -18,6 +19,18 @@ if( $posts ) {
             </div><a href="details.php?id=' . $post['id'] .'"><img class="post-image" src="' . $post['picture_link'] . '" alt=""></a></div>';
             echo '</div>';
         }
+
+        // pagination links
+        echo '<div class="pagination-container">';
+        echo '<div class="pagination">';
+        echo '<a href="?page=1">&laquo;</a>';
+        for( $i = 1; $i <= $total_pages; $i++ ) {
+            echo '<a href="?page=' . $i . '">' . $i . '</a>';
+        }
+        echo '<a href="?page=' . $total_pages . '">&raquo;</a>';
+        echo '</div>';
+        echo '</div>';
+
         ?>
     </div>
     <?php

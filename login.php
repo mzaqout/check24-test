@@ -19,8 +19,10 @@ if ( isset( $_POST[ 'submit' ] ) ) {
         Redirect::to( 'login.php', 'You need to login to view this page.', 'error' );
     }
 
-    $username = $_POST[ 'username' ];
-    $password = md5($_POST[ 'password' ]);
+    $username = sanitize_text_field( $_POST['username'] );
+    $password = sanitize_text_field( $_POST['password'] );
+
+    $password = md5($password);
 
     if ( $auth->checkLogin( $username, $password ) ) {
         Redirect::to('overview.php', 'You have been logged in', 'success');

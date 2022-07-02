@@ -66,4 +66,23 @@ class Post
         $stmt->execute();
     }
 
+    public function getPostsCount()
+    {
+        $stmt = $this->conn->prepare('SELECT COUNT(*) as c FROM posts');
+        $stmt->execute();
+
+        return $stmt->fetchColumn();
+    }
+
+    public function getPerPage(float $page_first_result, int $results_per_page)
+    {
+        $stmt = $this->conn->prepare('SELECT posts.id, posts.title, posts.body, posts.picture_link, posts.author_id, users.first_name, users.last_name 
+        FROM posts LEFT JOIN users ON posts.author_id = users.id LIMIT :page_first_result, :results_per_page');
+        $stmt->bindValue(':page_first_result', $page_first_result, PDO::PARAM_INT);
+        $stmt->bindValue(':results_per_page', $results_per_page, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }

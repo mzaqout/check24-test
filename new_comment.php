@@ -15,9 +15,9 @@ if ( isset( $_POST[ 'submit' ] ) ) {
         Redirect::to('login.php', 'You need to login to view this page.', 'danger');
     }
 
-    $name = $_POST['name'];
-    $text = $_POST['comment'];
-    $post_id = $_POST['post_id'];
+    $name = sanitize_text_field( $_POST['name'] );
+    $text = sanitize_html_field( $_POST['comment'] );
+    $post_id = sanitize_text_field( $_POST['post_id'] );
 
     if ( ! $name || ! $text ) {
         Redirect::to('details.php?id=' . $post_id, 'Please fill in all the data.', 'danger');

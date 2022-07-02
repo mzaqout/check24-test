@@ -2,6 +2,9 @@
 
 require_once './core/init.php';
 
+if ( $auth->isLoggedIn() ) {
+    Redirect::to('index.php');
+}
 
 if ( isset( $_POST[ 'submit' ] ) ) {
 
@@ -16,7 +19,7 @@ if ( isset( $_POST[ 'submit' ] ) ) {
     $password = md5($_POST[ 'password' ]);
 
     if ( $auth->checkLogin( $username, $password ) ) {
-        Redirect::to('login.php', 'You have been logged in', 'success');
+        Redirect::to('index.php', 'You have been logged in', 'success');
     } else {
         Redirect::to('login.php', 'Login is not valid', 'error');
     }

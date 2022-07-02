@@ -85,8 +85,11 @@ ul {
 }
 
 .alert {
-    margin-left: 100px;
-    width: 330px;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
 }
 .alert-danger {
     background-color: #f44336;
@@ -94,6 +97,12 @@ ul {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 3px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
 }
 
 .d-flex {
@@ -122,3 +131,4 @@ ul {
 .flex-1 {
     flex: 1;
 }
+

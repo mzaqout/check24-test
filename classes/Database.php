@@ -1,11 +1,8 @@
 <?php
 
-namespace App\Classes;
-use \PDO;
-
 class Database
 {
-    public static $instance = null;
+    public static ?Database $instance = null;
 
     private PDO $pdo;
 

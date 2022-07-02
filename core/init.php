@@ -8,3 +8,5 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
 }
+
+$post = new Post($conn);

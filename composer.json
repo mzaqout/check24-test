@@ -1,10 +1,17 @@
 {
     "name": "mamdouh/check24-test",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Mamdouh",
             "email": "mamdouhzaq@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "nesbot/carbon": "^2.59"
+    }
 }

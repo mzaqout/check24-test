@@ -1,5 +1,9 @@
 <?php
 
+use App\Classes\Redirect;
+use App\Classes\Session;
+use App\Classes\Template;
+
 require_once './core/init.php';
 
 if ( $auth->isLoggedIn() ) {

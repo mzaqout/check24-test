@@ -1,5 +1,11 @@
 <?php
-include_once 'autoload.php';
+
+use App\Classes\Auth;
+use App\Classes\Database;
+use App\Classes\Post;
+use App\Classes\Session;
+
+require_once './vendor/autoload.php';
 
 Session::init();
 

@@ -1,7 +1,10 @@
 <div class="container mt-2">
     <div class="row">
         <form class="login-form" action="login.php" method="post">
-            <input type="hidden" value="<?php echo Session::get('token')?>" name="token">
+            <input type="hidden" value="<?php
+            use App\Classes\Session;
+
+            echo Session::get('token')?>" name="token">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username" name="username">

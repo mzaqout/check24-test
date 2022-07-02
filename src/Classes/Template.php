@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Classes;
+
 class Template
 {
     private string $template;
@@ -24,6 +26,7 @@ class Template
         extract($this->variables);
         ob_start();
         include $this->template;
+
         return ob_get_clean();
     }
 }

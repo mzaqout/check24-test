@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Classes;
+
+use \PDO;
+
 class Post
 {
     private PDO $conn;
@@ -13,6 +17,7 @@ class Post
     {
         $stmt = $this->conn->prepare('SELECT * FROM posts');
         $stmt->execute();
+
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

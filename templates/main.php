@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php
+
+        use App\Classes\Session;
+
         echo $title ?></title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -16,7 +19,7 @@
             <div class="header-area">
                 <div class="row">
                     <div class="logo">
-                        <a href="home.php"><img src="https://via.placeholder.com/100.png" alt="Home"></a>
+                        <a href="index.php"><img src="https://via.placeholder.com/100.png" alt="Home" title="Home"></a>
                         <h1 class="site-title">Blog Name</h1>
                     </div>
                 </div>
@@ -67,5 +70,11 @@ endif; ?>
 if ($page === 'login') :
     include_once 'partials/login.php';
 endif; ?>
+
+<?php
+if ($page === 'overview') :
+    include_once 'partials/overview.php';
+endif; ?>
+
 </body>
 </html>

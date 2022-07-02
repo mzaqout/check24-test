@@ -44,4 +44,8 @@ class Auth
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    public function getUserId()
+    {
+        return $this->session->get('user_id');
+    }
 }

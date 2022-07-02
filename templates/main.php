@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script>
       tinymce.init({
-        selector: '#content',
+        selector: '#body',
         height: 300,
         width: '80%',
       });
@@ -57,13 +57,13 @@
 if ( \App\Classes\Session::has( 'message' ) ): ?>
     <div class="container mt-1">
         <div class="alert alert-<?php
-        echo Session::get('messageType') ?>">
+        echo \App\Classes\Session::get('messageType') ?>">
             <?php
-            echo Session::get('message'); ?>
+            echo \App\Classes\Session::get('message'); ?>
             <?php
-            Session::unset('message'); ?>
+            \App\Classes\Session::unset('message'); ?>
             <?php
-            Session::unset('messageType'); ?>
+            \App\Classes\Session::unset('messageType'); ?>
         </div>
 
     </div>
@@ -84,5 +84,11 @@ endif; ?>
 if ( $page === 'new-entry' ) :
     include_once 'partials/new_entry.php';
 endif; ?>
+
+<?php
+if ( $page === 'post-details' ) :
+    include_once 'partials/post_details.php';
+endif; ?>
+
 </body>
 </html>

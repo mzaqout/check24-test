@@ -12,10 +12,10 @@ if( $posts ) {
                 $body = 'No body';
             }
             echo '<div class="post-container">';
-            echo '<div class="post-title"><span>' . Carbon\Carbon::createFromDate($post['created_at']) . '</span> - <span>' . ucfirst($post['title']) . '</span></div>';
-            echo '<div class="d-flex justify-content-between"><div class="d-flex justify-content-between flex-direction-column flex-1">' . html_entity_decode( $post['body'] ) . '
-            <div class="d-flex justify-content-between"><p>Author: ' . $post['first_name'] . ' ' . $post['last_name'] . '</p> <p>Comments: 2</p></div>
-            </div><img class="post-image" src="' . $post['picture_link'] . '" alt=""></div>';
+            echo '<a href="details.php?id=' . $post['id'] .'"> <div class="post-title"><span>' . Carbon\Carbon::createFromDate($post['created_at']) . '</span> - <span>' . ucfirst($post['title']) . '</span></a></div>';
+            echo '<div class="d-flex justify-content-between"><div class="d-flex justify-content-between flex-direction-column flex-1"><a href="details.php?id=' . $post['id'] .'">' . html_entity_decode( $post['body'] ) . '</a>
+            <div class="d-flex justify-content-between"><a href="details.php?id=' . $post['id'] .'"><p>Author: ' . $post['first_name'] . ' ' . $post['last_name'] . '</p></a> <p><a href="details.php?id=' . $post['id'] .'">Comments: 2</a></p></div>
+            </div><a href="details.php?id=' . $post['id'] .'"><img class="post-image" src="' . $post['picture_link'] . '" alt=""></a></div>';
             echo '</div>';
         }
         ?>

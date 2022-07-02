@@ -3,7 +3,7 @@
 use App\Classes\Redirect;
 use App\Classes\Session;
 
-include_once './core/autoload.php';
+require_once './vendor/autoload.php';
 
 Session::init();
 

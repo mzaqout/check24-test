@@ -4,7 +4,7 @@ use App\Classes\Auth;
 use App\Classes\Database;
 use App\Classes\Post;
 use App\Classes\Session;
-
+use App\Classes\User;
 require_once './vendor/autoload.php';
 
 Session::init();
@@ -21,6 +21,7 @@ try {
     $comment = new \App\Classes\Comment( $conn );
     $auth = new Auth( $conn, new Session() );
     $page = new \App\Classes\Page( $conn );
+    $user = new User( $conn );
 } catch ( Exception $e ) {
     echo $e->getMessage();
 }

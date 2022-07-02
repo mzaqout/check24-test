@@ -17,10 +17,13 @@ $posts_count = $post->getPostsCount();
 
 $pages_count = ceil($posts_count / $results_per_page);
 
+$authors = $user->getAll();
+
 $template = new Template('templates/main.php');
 $template->title = 'Overview';
 $template->posts = $post->getPerPage( $page_first_result, $results_per_page );
 $template->page = 'overview';
 $template->total_pages = $pages_count;
+$template->authors = $authors;
 $template->auth = $auth;
 echo $template;

@@ -20,4 +20,8 @@ $(document).ready(function (message) {
             })
         }
     })
+
+    $('.author_link').on('click', function(e) {
+
+    })
 });

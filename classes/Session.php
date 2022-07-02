@@ -7,19 +7,24 @@ class Session
         session_start();
     }
 
-    public static function get(string $key)
+    public static function get( string $key )
     {
         return $_SESSION[$key] ?? null;
     }
 
-    public static function set(string $key, $value = null)
+    public static function set( string $key, $value = null )
     {
         $_SESSION[$key] = $value;
     }
 
-    public static function unset(string $key)
+    public static function has( string $key )
     {
-        unset($_SESSION[$key]);
+        return isset( $_SESSION[$key] );
+    }
+
+    public static function unset( string $key )
+    {
+        unset( $_SESSION[$key] );
     }
 
     public static function destroy()

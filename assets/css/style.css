@@ -48,6 +48,13 @@ ul {
 .mt-2 {
     margin-top: 15px;
 }
+.m-1 {
+    margin: 25px;
+}
+
+.comment {
+    font-size: 14px;
+}
 
 .login-form {
     background-color: #dce8f5;
@@ -162,4 +169,3 @@ ul {
 .flex-1 {
     flex: 1;
 }
-

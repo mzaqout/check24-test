@@ -12,10 +12,12 @@ if ( ! $_GET['id'] ) {
 $id = $_GET['id'];
 
 $data = $post->getById( $id );
+$comments = $comment->getByPostId( $id );
 
 $template = new Template('templates/main.php');
 $template->title = 'Post Details';
 $template->post = $data;
+$template->comments = $comments;
 $template->page = 'post-details';
 $template->auth = $auth;
 echo $template;

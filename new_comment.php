@@ -33,6 +33,7 @@ if ( isset( $_POST[ 'submit' ] ) ) {
         $comment->setWebsite( $website );
         $comment->setComment($text);
         $comment->setPostId( $post_id );
+        $comment->setUserId( $auth->getUserId() );
         $comment->save();
 
         Redirect::to('details.php?id=' . $post_id, 'Comment created successfully.', 'success');

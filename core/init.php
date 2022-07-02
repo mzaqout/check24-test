@@ -18,6 +18,7 @@ $db = Database::getInstance();
 try {
     $conn = $db->getConnection();
     $post = new Post( $conn );
+    $comment = new \App\Classes\Comment( $conn );
     $auth = new Auth( $conn, new Session() );
 } catch ( Exception $e ) {
     echo $e->getMessage();

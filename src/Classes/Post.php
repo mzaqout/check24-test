@@ -28,7 +28,8 @@ class Post
 
     public function getById($id)
     {
-        $stmt = $this->conn->prepare('SELECT * FROM posts LEFT JOIN users ON posts.author_id = users.id WHERE posts.id = :id');
+        $stmt = $this->conn->prepare('SELECT * FROM posts 
+                                            LEFT JOIN users ON posts.author_id = users.id WHERE posts.id = :id');
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 

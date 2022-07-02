@@ -1,0 +1,15 @@
+{
+    "name": "mamdouh/check24-test",
+    "autoload": {
+        "psr-4": {
+            "Mamdouh\\Check24Test\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mamdouh",
+            "email": "mamdouhzaq@gmail.com"
+        }
+    ],
+    "require": {}
+}

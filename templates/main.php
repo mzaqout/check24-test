@@ -5,12 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?php
-
-        use App\Classes\Session;
-
-        echo $title ?></title>
+    <title><?php echo $title ?></title>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+      tinymce.init({
+        selector: '#content',
+        height: 300,
+        width: '80%',
+      });
+    </script>
 </head>
 <body>
 <header>
@@ -50,7 +54,7 @@
 </header>
 
 <?php
-if (Session::has('message')): ?>
+if ( \App\Classes\Session::has( 'message' ) ): ?>
     <div class="container mt-1">
         <div class="alert alert-<?php
         echo Session::get('messageType') ?>">
@@ -72,9 +76,13 @@ if ($page === 'login') :
 endif; ?>
 
 <?php
-if ($page === 'overview') :
+if ( $page === 'overview' ) :
     include_once 'partials/overview.php';
 endif; ?>
 
+<?php
+if ( $page === 'new-entry' ) :
+    include_once 'partials/new_entry.php';
+endif; ?>
 </body>
 </html>

@@ -15,7 +15,7 @@ class Post
 
     public function getAll()
     {
-        $stmt = $this->conn->prepare('SELECT * FROM posts');
+        $stmt = $this->conn->prepare('SELECT * FROM posts LEFT JOIN users ON posts.author_id = users.id');
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -12,6 +12,7 @@
         }
     ],
     "require": {
-        "nesbot/carbon": "^2.59"
+        "nesbot/carbon": "^2.59",
+      "ext-pdo": "*"
     }
 }

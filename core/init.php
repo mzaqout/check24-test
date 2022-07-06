@@ -7,6 +7,8 @@ use App\Classes\Session;
 use App\Classes\User;
 require_once './vendor/autoload.php';
 
+require_once './core/helper.php';
+
 Session::init();
 
 if( !Session::has( 'token' ) ) {
